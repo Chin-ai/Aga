@@ -20,7 +20,7 @@ namespace ardin
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false); /// lkwhef
+            Application.SetCompatibleTextRenderingDefault(false); /// lkwhef,mbm
             Application.Run(new Menu());
         }
     }
