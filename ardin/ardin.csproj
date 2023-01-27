@@ -98,6 +98,9 @@
     <Compile Include="Remont.Designer.cs">
       <DependentUpon>Remont.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Car.resx">
+      <DependentUpon>Car.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mas.resx">
       <DependentUpon>Mas.cs</DependentUpon>
     </EmbeddedResource>

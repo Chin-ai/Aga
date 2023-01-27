@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ardin
 {
@@ -15,6 +16,11 @@ namespace ardin
         public Car()
         {
             InitializeComponent();
+        }
+
+        private void Car_Activated(object sender, EventArgs e)
+        {
+
         }
     }
 }
