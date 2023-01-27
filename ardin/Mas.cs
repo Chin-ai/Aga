@@ -86,7 +86,7 @@ namespace ardin
             SqlCommand command1 = new SqlCommand(SQL_dob, connection1);
             SqlDataReader dr = command1.ExecuteReader();
             
-            SQL_dob = "INSERT INTO Mas(nmas,fio,dolj) values (" + max + ", N'" + textBox1.Text +"', N'" + textBox2.Text + "')";
+          //  SQL_dob = "INSERT INTO Mas(nmas,fio,dolj) values (" + max + ", N'" + textBox1.Text +"', N'" + textBox2.Text + "')";
 
             connection1 = new SqlConnection(Data.Glob_connection_string);
             connection1.Open();
@@ -97,24 +97,6 @@ namespace ardin
             connection1.Close();
             MessageBox.Show("Данные сохранены");
             this.Activate();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            SqlConnection connection1 = new SqlConnection(Data.Glob_connection_string);
-            connection1.Open();
-
-            string SQL_izm = "DELETE from Mas WHERE nmas=" + rd;
-            SqlCommand command1 = new SqlCommand(SQL_izm, connection1);
-            SqlDataReader dr = command1.ExecuteReader();
-            connection1.Close();
-            MessageBox.Show("Данные удалены");
-            this.Activate();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
