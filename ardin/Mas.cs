@@ -76,15 +76,26 @@ namespace ardin
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string SQL_dob = "SELECT max(nmas) as max FROM Mas";
+            string SQL_dob = "SELECT max(nmas) as max FROM MAS";
 
             SqlConnection connection1 = new SqlConnection(Data.Glob_connection_string);
             connection1.Open();
 
             SqlCommand command1 = new SqlCommand(SQL_dob, connection1);
             SqlDataReader dr = command1.ExecuteReader();
-            
-          //  SQL_dob = "INSERT INTO Mas(nmas,fio,dolj) values (" + max + ", N'" + textBox1.Text +"', N'" + textBox2.Text + "')";
+            string max = "";
+            int max2 = 0;
+            while (dr.Read())
+            {
+                max = string.Format("{0}", dr["max"]);
+            }
+            dr.Close();
+            connection1.Close();
+            if (max == "") { max2 = 1; }
+            else { max2 = Convert.ToInt32(max) + 1; }
+            max = Convert.ToString(max2);
+
+            SQL_dob = "INSERT INTO MAS(nmas,fio,dolj) values (" + max + ", N'" + textBox1.Text + "', N'" + textBox2.Text + "')";
 
             connection1 = new SqlConnection(Data.Glob_connection_string);
             connection1.Open();
@@ -95,8 +106,7 @@ namespace ardin
             connection1.Close();
             MessageBox.Show("Данные сохранены");
             this.Activate();
-        }
 
-        
+        }
     }
 }

@@ -119,6 +119,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Remont.resx">
+      <DependentUpon>Remont.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AvtoBaseDataSet.xsc">
       <DependentUpon>AvtoBaseDataSet.xsd</DependentUpon>
     </None>
