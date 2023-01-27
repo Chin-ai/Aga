@@ -51,7 +51,6 @@ namespace ardin
                 nomas = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
                 button3.Enabled = false;
                 button1.Enabled = true;
-                button4.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +72,6 @@ namespace ardin
             textBox2.Text = "";
             button3.Enabled = true;
             button1.Enabled = false;
-            button4.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -98,5 +96,7 @@ namespace ardin
             MessageBox.Show("Данные сохранены");
             this.Activate();
         }
+
+        
     }
 }
